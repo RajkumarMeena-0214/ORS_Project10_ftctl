@@ -20,7 +20,7 @@ import javax.persistence.criteria.Root;
 import com.rays.exception.DuplicateRecordException;
 
 /**
- * Amit Bansal
+ * Rajkumar Meena
  *
  * @param <T>
  */
@@ -117,15 +117,15 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 		System.out.println("after getOrder By clause........amit");
 		cq.orderBy(orderBys.toArray(new Order[orderBys.size()]));
 
-		System.out.println("After order by clause.......amit ");
+		System.out.println("After order by clause.......Rajkumar");
 		TypedQuery<T> query = entityManager.createQuery(cq);
-		System.out.println("createCriteria end here---....rahul");
+		System.out.println("createCriteria end here---....Rajkumar");
 		return query;
 
 	}
 
 	/**
-	 * Creates WHERE clause of search
+	 * Creates WHERE clause of searchRus
 	 * 
 	 * @param dto
 	 * @param builder
@@ -311,7 +311,7 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 	protected List<Order> getOrderByClause(T dto, CriteriaBuilder builder, Root<T> qRoot) {
 
 		// Apply Order by clause
-		System.out.println("baseDAO in getOrderByClause.......amit ");
+		System.out.println("baseDAO in getOrderByClause.......Rajkumar");
 		LinkedHashMap<String, String> map = dto.orderBY();
 
 		List<Order> orderBys = new ArrayList<Order>();

@@ -35,7 +35,7 @@ import com.rays.service.UserServiceInt;
  * Login controller provides API for Sign Up, Sign In and Forgot password
  * operations
  * 
- * Amit Bansal
+ * Rajkumar Meena
  */
 @RestController
 @RequestMapping(value = "Auth")
@@ -61,7 +61,7 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		// res.setSuccess(true);
 		res.addMessage("Logout Successfully");
 		// res.addResult("roleList", list);
-		System.out.println("Amit Bansal logout");
+		System.out.println("Rajkumar Meena logout");
 		return res;
 	}
 
@@ -131,7 +131,7 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,
 			HttpServletRequest req) {
 
-		System.out.println("User ID id --------------Amit Bansal" + userId);
+		System.out.println("User ID id --------------Rajkumar Meena" + userId);
 
 		UserDTO userDTO = baseService.findById(userId, userContext);
 
@@ -141,10 +141,10 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		System.out.println(doc.getDescription() + "description");
 
 		doc.setPath(req.getServletPath());
-		System.out.println(doc.getPath() + "path-----rahul");
+		System.out.println(doc.getPath() + "path-----Rajkumar");
 
 		doc.setUserId(userId);
-		System.out.println(doc.getUserId() + "id-----rahul");
+		System.out.println(doc.getUserId() + "id-----Rajkumar");
 
 		if (userDTO.getImageId() != null && userDTO.getImageId() > 0) {
 			doc.setId(userDTO.getImageId());

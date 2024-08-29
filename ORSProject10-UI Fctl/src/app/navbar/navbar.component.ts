@@ -90,6 +90,11 @@ export class NavbarComponent implements OnInit {
     var _self = this;
 
     console.log('Logout', this.form);
+    _self.httpService.get("http://localhost:8084/Auth/logout",function (res){
+      _self.servicelocator.router.navigateByUrl('/login/true');
+        if(res.success){
+          localStorage.clear();
+          _self.form.message = res.result.message;
 
     // let url = this.servicelocator.endpoints.getEndpoint(this.servicelocator.endpoints.AUTH, "logout");
 
@@ -115,11 +120,7 @@ export class NavbarComponent implements OnInit {
     //   this.form.message = "Logout Successfully";
     //   console.log(this.form.message);
     //  _self.servicelocator.router.navigateByUrl('/login/true');
-       _self.httpService.get("http://localhost:8084/Auth/logout",function (res){
-      _self.servicelocator.router.navigateByUrl('/login/true');
-        if(res.success){
-          localStorage.clear();
-          _self.form.message = res.result.message;
+       
       //     _self.form.list = res.result.data;
       //     localStorage.removeItem("JSESSIONID");
       //     _self.servicelocator.router.navigateByUrl('/login');

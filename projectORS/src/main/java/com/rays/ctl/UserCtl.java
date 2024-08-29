@@ -40,7 +40,7 @@ import com.rays.service.UserServiceInt;
 
 
 /**
- * @author Amit Bansal
+ * @author Rajkumar Meena
  *
  */
 @RestController
@@ -64,7 +64,7 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 
 	@GetMapping("/preload")
 	public ORSResponse preload() {
-		System.out.println("inside preload amit in userctl");
+		System.out.println("inside preload Rajkumar in userctl");
 		ORSResponse res = new ORSResponse(true);
 		RoleDTO dto = new RoleDTO();
 		dto.setStatus(RoleDTO.ACTIVE);
@@ -211,7 +211,7 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,
 			HttpServletRequest req) {
 
-		System.out.println("User ID id --------------Amit Bansal" + userId);
+		System.out.println("User ID id --------------Rajkumar Meena" + userId);
 
 		UserDTO userDTO = baseService.findById(userId, userContext);
 
@@ -221,10 +221,10 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		System.out.println(doc.getDescription() + "description");
 
 		doc.setPath(req.getServletPath());
-		System.out.println(doc.getPath() + "path-----rahul");
+		System.out.println(doc.getPath() + "path-----Rajkumar");
 
 		doc.setUserId(userId);
-		System.out.println(doc.getUserId() + "id-----rahul");
+		System.out.println(doc.getUserId() + "id-----Rajkumar");
 
 		if (userDTO.getImageId() != null && userDTO.getImageId() > 0) {
 			doc.setId(userDTO.getImageId());

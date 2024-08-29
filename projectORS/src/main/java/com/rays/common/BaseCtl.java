@@ -28,7 +28,7 @@ import com.rays.dto.UserDTO;
 /**
  * Base controller class contains get, search, save, delete REST APIs
  * 
- * Amit Bansal
+ * Rajkumar Meena
  */
 public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends BaseServiceInt<T>> {
 
@@ -284,7 +284,7 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 		if (bindingResult.hasErrors()) {
 			System.out.println("BaseCtl ki validate ke error block me");
 			res.setSuccess(false);
-
+ 
 			Map<String, String> errors = new HashMap<String, String>();
 
 			List<FieldError> list = bindingResult.getFieldErrors();

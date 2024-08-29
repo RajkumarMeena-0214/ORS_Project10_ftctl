@@ -14,11 +14,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.rays.common.FrontCtl;		
 
 /**
- * Amit Bansal
+ * Rajkumar Meena
  *
  */
 
+/**
+ * @author Raj kumar
+ *
+ */
 @SpringBootApplication
+
 public class ProjectOrsApplication extends SpringBootServletInitializer {
 
 	@Autowired

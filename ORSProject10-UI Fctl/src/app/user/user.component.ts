@@ -31,17 +31,17 @@ export class UserComponent extends BaseCtl {
       _self.form.message = '';
       //_self.form.data.id=0;
       console.log("form data going to be submit" , res.result.data);
-      _self.form.data.id = res.result.data.id;
+      _self.form.data.id = res.result.data;
       if (_self.fileToUpload) {
-        console.log('rahul');
+        console.log('Rajkumar');
         _self.myFile();
       }
       if (res.success) {
         _self.form.message = "Data is saved";
-        _self.form.data.id = res.result.data.id;
+        _self.form.data.id = res.result.data;
 
         console.log(_self.form.data.id);
-        console.log("----------Rahul----------.");
+        console.log("----------Rajkumar----------.");
 
       } else {
         _self.form.error = true;
@@ -49,8 +49,9 @@ export class UserComponent extends BaseCtl {
           _self.form.inputerror = res.result.inputerror;
         }
         _self.form.message = res.result.message;
+        _self.form.data.id = res.result.data.id;
       }
-      _self.form.data.id = res.result.data.id;
+     
       console.log('FORM', _self.form);
     });
   }
@@ -62,11 +63,11 @@ export class UserComponent extends BaseCtl {
     this.serviceLocator.httpService.post(this.api.search, this.form.data, function (res) {
       _self.form.message = '';
       _self.form.inputerror = {};
-      _self.form.data.id = res.result.data;
+      _self.form.data.id = res.result.data.id;
       _self.myFile();
       if (res.success) {
         _self.form.message = "Data is saved";
-        _self.form.data.id = res.result.data;
+        _self.form.data.id = res.result.data.id;
 
         console.log(_self.form.data.id);
         console.log("--------------------.");
@@ -76,7 +77,7 @@ export class UserComponent extends BaseCtl {
         _self.form.inputerror = res.result.inputerror;
         _self.form.message = res.result.message;
       }
-      _self.form.data.id = res.result.data;
+      _self.form.data.id = res.result.data.id;
       console.log('FORM', _self.form);
     });
   }

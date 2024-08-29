@@ -26,7 +26,7 @@ import com.rays.dto.UserDTO;
  *   
  * Default propagation value is Propagation.REQUIRED and readOnly = false
  * 
- * Amit Bansal
+ * Rajkumar Meena
  */
 @Service
 @Transactional
